@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "UseFormCollection";
+    Layout = null;
+}
+
+<style>
+    .section {
+        align-items: center;
+        display: block;
+        justify-content: center;
+        margin: auto;
+        width: 32%;
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    h4 {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .si {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .s1 {
+        margin-bottom: 10px;
+    }
+</style>
+
+@*align-items:center; display:block; justify-content: center;*@
+<div class="section">
+    <h4> THỰC HIỆN PHÉP TOÁN CƠ BẢN</h4>
+    <div>
+        <form name="f1" action="" method="post">
+            <div>
+                Nhập a: <input class="si" type="text" name="a" /> <br />
+                Nhập b: <input class="si" type="text" name="b" /> <br />
+            </div>
+            <div class="s1">
+                <input type="radio" checked name="pt" value="+" />Cộng &nbsp;
+                <input type="radio" name="pt" value="-" style="" />Trừ &nbsp;
+                <input type="radio" name="pt" value="*" />Nhân &nbsp;
+                <input type="radio" name="pt" value="/" />Chia &nbsp;
+                <input type="submit" value="Tính toán" /><br />
+            </div>
+            <div>
+                Kết quả: <input class="si" type="text" name="kq" value="@ViewBag.KQ" />
+            </div>
+        </form>
+    </div>
+</div>
